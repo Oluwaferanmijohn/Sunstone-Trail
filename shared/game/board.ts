@@ -1,4 +1,4 @@
-import type { BoardTile } from './types'
+import type { BoardTile } from '#game/types'
 
 export const FINISH_POSITION = 36
 

@@ -1,5 +1,5 @@
-import { createGame, rollForCurrentPlayer } from '../../shared/game/engine'
-import type { GameState, PlayerColour, PlayerState } from '../../shared/game/types'
+import { createGame, rollForCurrentPlayer } from '#game/engine'
+import type { GameState, PlayerColour, PlayerState } from '#game/types'
 
 export const ROOM_CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
 

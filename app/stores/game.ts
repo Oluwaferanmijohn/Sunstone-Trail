@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
-import { createGame, rollForCurrentPlayer } from '../../shared/game/engine'
-import type { GameState, PlayerColour } from '../../shared/game/types'
+import { createGame, rollForCurrentPlayer } from '#game/engine'
+import type { GameState, PlayerColour } from '#game/types'
 
 interface NewPlayer {
   id: string

@@ -1,4 +1,4 @@
-import type { GameEvent, GameState, PlayerColour } from '../../shared/game/types'
+import type { GameEvent, GameState, PlayerColour } from '#game/types'
 
 export interface RoomPlayer {
   user_id: string

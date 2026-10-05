@@ -1,10 +1,14 @@
 import tailwindcss from '@tailwindcss/vite'
+import { fileURLToPath } from 'node:url'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   modules: ['@pinia/nuxt'],
+  alias: {
+    '#game': fileURLToPath(new URL('./shared/game', import.meta.url))
+  },
   vite: {
     plugins: [tailwindcss()]
   },

@@ -1,5 +1,5 @@
-import { FINISH_POSITION, tileAt } from './board'
-import type { GameEvent, GameState, PlayerState, RollResult } from './types'
+import { FINISH_POSITION, tileAt } from '#game/board'
+import type { GameEvent, GameState, PlayerState, RollResult } from '#game/types'
 
 function cloneState(state: GameState): GameState {
   return {

@@ -1,4 +1,4 @@
-import type { PlayerColour } from '../../../../shared/game/types'
+import type { PlayerColour } from '#game/types'
 import type { RoomPlayerRow, RoomRow } from '../../../utils/rooms'
 import { enforceRateLimit } from '../../../utils/rate-limit'
 import { requireSupabaseUser, supabaseAdmin } from '../../../utils/supabase'

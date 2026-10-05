@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { BOARD } from '../../../shared/game/board'
-import type { GameState, PlayerColour } from '../../../shared/game/types'
+import { BOARD } from '#game/board'
+import type { GameState, PlayerColour } from '#game/types'
 
 const props = defineProps<{ game: GameState }>()
 

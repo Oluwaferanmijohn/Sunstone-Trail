@@ -1,5 +1,5 @@
 import { createClient, type RealtimeChannel } from '@supabase/supabase-js'
-import type { GameState } from '../../shared/game/types'
+import type { GameState } from '#game/types'
 
 interface RealtimeRoomRow {
   code: string

@@ -5,6 +5,15 @@ const roomCode = ref('')
 const pending = ref<'create' | 'join' | null>(null)
 const errorMessage = ref('')
 
+onMounted(() => {
+  displayName.value = localStorage.getItem('sunstone-trail:display-name') ?? ''
+})
+
+watch(displayName, (name) => {
+  const cleaned = name.trim()
+  if (cleaned) localStorage.setItem('sunstone-trail:display-name', cleaned)
+})
+
 async function createRoom() {
   if (!displayName.value.trim()) return
   pending.value = 'create'
@@ -41,6 +50,7 @@ async function joinRoom() {
         <label class="block text-sm font-black uppercase tracking-wider" for="room-code">Room code</label>
         <input id="room-code" v-model="roomCode" maxlength="6" placeholder="ABC123" class="mt-2 w-full rounded-xl border-2 border-[#513121] bg-[#fffaf0] px-4 py-3 font-mono uppercase tracking-[.3em] outline-none focus:ring-4 focus:ring-[#f5c44d]/60">
         <button class="mt-3 w-full rounded-xl border-2 border-[#513121] bg-[#f5c44d] px-4 py-3 font-black disabled:opacity-50" :disabled="!displayName.trim() || !roomCode.trim() || pending !== null" @click="joinRoom">Join room</button>
+        <p v-if="!displayName.trim() || !roomCode.trim()" class="mt-3 text-center text-sm font-bold text-[#8f542e]">Enter both your explorer name and the six-character room code to join.</p>
         <p v-if="errorMessage" class="mt-4 rounded-xl bg-[#ffe0d7] p-3 text-sm font-bold text-[#962d21]">{{ errorMessage }}</p>
       </section>
     </div>

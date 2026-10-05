@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { GameEvent, PlayerColour } from '../../../shared/game/types'
+import type { GameEvent, PlayerColour } from '#game/types'
 import type { RoomSnapshot } from '../../composables/useRoomApi'
 
 const route = useRoute()
