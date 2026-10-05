@@ -1,0 +1,17 @@
+{
+  "name": "Sunstone Trail",
+  "short_name": "Sunstone",
+  "description": "An original online adventure board game.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff7e7",
+  "theme_color": "#513121",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
