@@ -2,6 +2,9 @@
   "name": "yale",
   "type": "module",
   "private": true,
+  "engines": {
+    "node": ">=20.19.0 <23"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
